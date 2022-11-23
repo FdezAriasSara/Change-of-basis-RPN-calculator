@@ -5,6 +5,16 @@
   Por lo general, en este documento se usarán medidas relativas al viewport,
   descritas en CSS Values and Units Module Level 3, apartado 5.1.2
   **********************/
+   /**Especificidad: 001 **/
+  label{
+
+    /*Hace que ocupe de la columna 1 a la 6 (en este caso, todas las columnas)*/
+    color:#FEC7FF;
+    /*Produce un warning: Realmente, sí hay color de fondo, heredado de su elemento padre , en este caso , form.*/
+    font-style:italic;
+    grid-column: 1 / 6;
+
+  }
  /**Especificidad: 001 **/
  form {
   color:#000000;
@@ -31,7 +41,7 @@ textarea{
 /**Especificidad: 011 **/
 textarea[name="pilaOperandos"]{
    
-    grid-row: 1/3;
+    grid-row: 2/4;
     background-color:#FEC7FF;
     /*Produce una advertencia al no especificarse de forma explícita el color de primer plano. Este se hereda de el elemento form.*/
     font-size: 2em;    
@@ -41,7 +51,7 @@ textarea[name="pilaOperandos"]{
 /**Especificidad: 011 **/
 textarea[name="operandoActual"]{
     /*Produce una advertencia al no especificarse de forma explícita el color de primer plano. Este se hereda de el elemento form.*/
-    grid-row: 3;
+    grid-row: 4;
     background-color:#FEDBFF;
     font-size: 3em;        
     text-align:right;
